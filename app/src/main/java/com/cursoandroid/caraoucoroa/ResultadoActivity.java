@@ -19,14 +19,15 @@ public class ResultadoActivity extends AppCompatActivity {
         Bundle dados = getIntent().getExtras();
         sortearMoeda(dados.getInt("randomico"));
     }
+
     private void sortearMoeda(int randomico){
         if(randomico == 0)
             imageMoeda.setImageResource(R.drawable.moeda_cara);
         else if(randomico == 1)
             imageMoeda.setImageResource(R.drawable.moeda_coroa);
     }
+
     public void voltar(View view){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+        finish();
     }
 }
